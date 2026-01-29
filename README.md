@@ -124,4 +124,4 @@ Always follow your organization’s security, compliance, and change-management 
 
 ## License
 
-MIT License
+[MIT License](https://github.com/mikepfeiffer/AzureIAM-PowerShell/blob/main/LICENSE)
