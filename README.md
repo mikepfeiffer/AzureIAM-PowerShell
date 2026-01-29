@@ -11,7 +11,7 @@ The scripts are designed for **sysadmins and CloudOps engineers** who want pract
 
 ## What You’ll Learn from the Webinar
 
-The webinar focuses on **hands-on identity and access management tasks** using PowerShell, with an emphasis on:
+The webinar focuses on **hands-on identity and access management tasks** with an emphasis on:
 
 - The difference between **Entra ID roles** and **Azure RBAC**
 - When to use **Microsoft.Entra PowerShell (Graph-based)** vs **Az PowerShell**
