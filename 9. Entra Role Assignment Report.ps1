@@ -1,8 +1,3 @@
-
-
-Connect-Entra -Scopes 'Directory.Read.All'
-
-
 # ===================================================================
 # Entra ID Directory Role Assignment Report (Readable Table)
 #
@@ -15,6 +10,10 @@ Connect-Entra -Scopes 'Directory.Read.All'
 # Prereq:
 #   Connect-Entra -Scopes 'Directory.Read.All'
 # ===================================================================
+
+# Connect to Entra ID using a scope that allows us to read from the tenant/directory
+
+Connect-Entra -Scopes 'Directory.Read.All'
 
 # Get role assignments
 $assignments = Get-EntraDirectoryRoleAssignment -All
