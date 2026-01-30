@@ -87,3 +87,22 @@ $results | Export-Csv -Path $reportPath -NoTypeInformation
 Write-Host "Bulk provisioning complete." -ForegroundColor Green
 Write-Host "Input CSV:  $csvPath"
 Write-Host "Report CSV: $reportPath"
+
+
+# -------------------------------------------------------------------
+# NOTE: Hybrid Identity Considerations
+#
+# This script creates cloud-only users in Microsoft Entra ID.
+# In hybrid environments where identities are synchronized from
+# on-prem Active Directory (Entra Connect / Cloud Sync), user accounts
+# should typically be created on-prem first and allowed to sync.
+#
+# Creating users directly in Entra ID is appropriate for:
+# - Cloud-only identities
+# - Test or lab environments
+# - Scenarios where on-prem AD is not the source of authority
+#
+# Always follow your organization's identity source-of-authority
+# model when provisioning users in hybrid environments.
+# -------------------------------------------------------------------
+
