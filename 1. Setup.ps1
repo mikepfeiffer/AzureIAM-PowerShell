@@ -63,7 +63,8 @@ Connect-Entra -Scopes `
   'User.ReadWrite.All',
   'Group.ReadWrite.All',
   'Directory.Read.All',
-  'Directory.AccessAsUser.All'
+  'Directory.AccessAsUser.All',
+  'Directory.ReadWrite.All'
 
 
 # -------------------------------------------------------------------
