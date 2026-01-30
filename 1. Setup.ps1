@@ -31,6 +31,8 @@
 # - Installed to the CurrentUser scope so no admin rights are required
 # - Stored in the Cloud Shell home directory, so it persists
 #   across Cloud Shell sessions
+#
+# See https://learn.microsoft.com/en-us/azure/cloud-shell/persisting-shell-storage
 # -------------------------------------------------------------------
 
 
