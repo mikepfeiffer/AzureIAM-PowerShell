@@ -51,26 +51,17 @@ Install-Module `
 # Unlike older Azure AD modules, Graph requires explicit OAuth scopes
 # to define what this session is allowed to do.
 #
-# Requested scopes for this demo:
-# - User.ReadWrite.All
-#     Allows full read/write access to users in the directory
-#
-# - Group.ReadWrite.All
-#     Allows full read/write access to groups and group membership
-#
-# These delegated permissions support common IAM automation scenarios
-# such as:
-# - Creating and updating users
-# - Creating security or Microsoft 365 groups
-# - Managing group membership
-#
 # Note:
 # - Admin consent is required for these scopes
 # - Consent is prompted the first time if not already granted
 # -------------------------------------------------------------------
 
 
-Connect-Entra -Scopes 'User.ReadWrite.All', 'Group.ReadWrite.All'
+Connect-Entra -Scopes `
+  'User.ReadWrite.All',
+  'Group.ReadWrite.All',
+  'Directory.Read.All',
+  'Directory.AccessAsUser.All'
 
 
 # -------------------------------------------------------------------
@@ -78,6 +69,7 @@ Connect-Entra -Scopes 'User.ReadWrite.All', 'Group.ReadWrite.All'
 # - Authenticated to Microsoft Entra ID
 # - Authorized via Microsoft Graph using delegated permissions
 # -------------------------------------------------------------------
+
 
 
 
