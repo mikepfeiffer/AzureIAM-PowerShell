@@ -58,27 +58,27 @@ These scripts use the **Microsoft.Entra PowerShell module**, which is built on M
 
 ---
 
-### Azure RBAC (Resource Access)
-
-These scripts use **Az PowerShell** and focus on Azure Resource Manager–level access.
-
-- **8. Assign Azure RBAC.ps1**  
-  Assign an Azure RBAC role (Reader, Contributor, etc.) to a user at a defined scope (subscription or resource group).
-
-- **10. Custom RBAC Role.ps1**  
-  Demonstrates creating and working with custom Azure RBAC roles.
-
----
-
 ### Reporting & Visibility
 
-- **9. Entra Role Assignment Report.ps1**  
+- **8. Entra Role Assignment Report.ps1**  
   Generates a readable report showing:
   - Entra role name  
   - Who the role is assigned to (user, group, service principal)  
   - Scope  
 
   This script highlights how raw Graph IDs are resolved into human-readable output for auditing and review.
+
+---
+
+### Azure RBAC (Resource Access)
+
+These scripts use **Az PowerShell** and focus on Azure Resource Manager–level access.
+
+- **9. Assign Azure RBAC.ps1**  
+  Assign an Azure RBAC role (Reader, Contributor, etc.) to a user at a defined scope (subscription or resource group).
+
+- **10. Custom RBAC Role.ps1**  
+  Demonstrates creating and working with custom Azure RBAC roles.
 
 ---
 
