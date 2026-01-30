@@ -14,10 +14,11 @@ New-EntraGroup @groupParams
 
 
 # ===================================================================
-# Create a new group
+# Add user to a group
 # ===================================================================
 
 
 $group = Get-EntraGroup -Filter "displayName eq 'Sandboxlabs marketing'"
 $user = Get-EntraUser -UserId 'ralph@sandboxlabs.net'
 Add-EntraGroupMember -GroupId $group.Id -MemberId $user.Id
+
