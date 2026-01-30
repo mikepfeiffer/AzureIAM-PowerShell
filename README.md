@@ -61,13 +61,12 @@ These scripts use the **Microsoft.Entra PowerShell module**, which is built on M
 ### Entra Role Assignment + Reporting & Visibility
 
 - **8. Entra Role Assignment.ps1**
-  Demonstrates how to assign an Entra ID (directory) role to a user
-  Generates a readable report showing:
+  Demonstrates how to assign an Entra ID (directory) role to a user and generates a readable report showing:
   - Entra role name  
   - Who the role is assigned to (user, group, service principal)  
   - Scope  
 
-  This script highlights how raw Graph IDs are resolved into human-readable output for auditing and review.
+  This example highlights how raw Graph IDs are resolved into human-readable output for auditing and review.
 
 ---
 
