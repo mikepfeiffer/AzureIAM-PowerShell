@@ -2,7 +2,6 @@
 # Create a new group
 # ===================================================================
 
-Connect-Entra -Scopes 'Group.ReadWrite.All'
 
 $groupParams = @{
     DisplayName = 'Sandboxlabs marketing'

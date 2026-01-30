@@ -16,11 +16,11 @@
 $passwordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
 $passwordProfile.Password = '2oC69}_oX,r['
 $userParams = @{
-    DisplayName = 'Ralph Miller'
+    DisplayName = 'Ron Miller'
     PasswordProfile = $passwordProfile
-    UserPrincipalName = 'ralph@sandboxlabs.net'
+    UserPrincipalName = 'ron@sandboxlabs.net'
     AccountEnabled = $true
-    MailNickName = 'ralph'
+    MailNickName = 'ron'
 }
 
 New-EntraUser @userParams
