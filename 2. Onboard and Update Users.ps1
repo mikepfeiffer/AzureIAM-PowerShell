@@ -48,7 +48,7 @@ New-EntraUser @userParams
 # Update an existing user
 # ===================================================================
 
-# Identify the user (UPN works great for demos)
+# Identify the user
 $userId = 'ralph@sandboxlabs.net'
 
 # (Optional) Show current values before changes
@@ -75,3 +75,4 @@ Set-EntraUser `
 Get-EntraUser -UserId $userId |
     Select-Object DisplayName, UserPrincipalName, JobTitle, Department, OfficeLocation, MobilePhone, BusinessPhones |
     Format-List
+
