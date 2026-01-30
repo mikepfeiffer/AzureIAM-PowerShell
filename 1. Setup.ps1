@@ -64,7 +64,8 @@ Connect-Entra -Scopes `
   'Group.ReadWrite.All',
   'Directory.Read.All',
   'Directory.AccessAsUser.All',
-  'Directory.ReadWrite.All'
+  'Directory.ReadWrite.All',
+  'RoleManagement.ReadWrite.Directory'
 
 
 # -------------------------------------------------------------------
@@ -72,6 +73,7 @@ Connect-Entra -Scopes `
 # - Authenticated to Microsoft Entra ID
 # - Authorized via Microsoft Graph using delegated permissions
 # -------------------------------------------------------------------
+
 
 
 
