@@ -2,7 +2,7 @@
 # Reset Password
 # ===================================================================
 
-Connect-Entra -Scopes 'User.ReadWrite.All', 'Group.ReadWrite.All', 'Directory.AccessAsUser.All'
+
 $securePassword = ConvertTo-SecureString 'Q8!vN2#pL7@xR5$kT9^m' -AsPlainText -Force
 
 Set-EntraUserPasswordProfile -ObjectId 'ralph@sandboxlabs.net' -Password $securePassword
@@ -23,3 +23,4 @@ Set-EntraUserPasswordProfile -ObjectId 'ralph@sandboxlabs.net' -Password $secure
 # Always ensure your tenant’s SSPR scope, licensing, and writeback
 # configuration align with your identity source-of-authority model.
 # -------------------------------------------------------------------
+
