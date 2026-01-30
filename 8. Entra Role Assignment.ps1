@@ -1,4 +1,40 @@
 # ===================================================================
+# Demo: Assign an Entra ID directory role to a user
+#
+# This script demonstrates how to assign an Entra ID (directory)
+# role such as User Administrator or Groups Administrator.
+#
+# Notes:
+# - Entra roles apply at the DIRECTORY level
+# - This is NOT Azure RBAC
+# - Uses Microsoft.Entra PowerShell (Graph-based)
+# ===================================================================
+
+
+$userUpn  = 'ralph@sandboxlabs.net'
+$roleName = 'User Administrator'
+
+# Get the user
+$user = Get-EntraUser -UserId $userUpn
+
+# Get the role definition
+$role = Get-EntraDirectoryRoleDefinition |
+    Where-Object { $_.DisplayName -eq $roleName }
+
+# Assign the role
+New-EntraDirectoryRoleAssignment `
+    -PrincipalId      $user.Id `
+    -RoleDefinitionId $role.Id `
+    -DirectoryScopeId '/'
+
+# Verify assignment
+Get-EntraDirectoryRoleAssignment |
+    Where-Object { $_.PrincipalId -eq $user.Id } |
+    Select-Object PrincipalId, RoleDefinitionId |
+    Format-Table -AutoSize
+    
+
+# ===================================================================
 # Entra ID Directory Role Assignment Report (Readable Table)
 #
 # Shows:
