@@ -42,3 +42,36 @@ New-EntraUser @userParams
 # Always follow your organization's identity source-of-authority
 # model when provisioning users in hybrid environments.
 # -------------------------------------------------------------------
+
+
+# ===================================================================
+# Update an existing user
+# ===================================================================
+
+# Identify the user (UPN works great for demos)
+$userId = 'ralph@sandboxlabs.net'
+
+# (Optional) Show current values before changes
+Get-EntraUser -UserId $userId |
+    Select-Object DisplayName, UserPrincipalName, JobTitle, Department, OfficeLocation, MobilePhone, BusinessPhones |
+    Format-List
+
+
+# -------------------------------------------------------------------
+# Update common attributes
+# -------------------------------------------------------------------
+Set-EntraUser `
+    -UserId $userId `
+    -JobTitle 'CloudOps Engineer' `
+    -Department 'IT' `
+    -OfficeLocation 'Phoenix' `
+    -MobilePhone '+1 602 555 0188' `
+    -BusinessPhones @('+1 602 555 0100')
+
+
+# -------------------------------------------------------------------
+# Verify the update
+# -------------------------------------------------------------------
+Get-EntraUser -UserId $userId |
+    Select-Object DisplayName, UserPrincipalName, JobTitle, Department, OfficeLocation, MobilePhone, BusinessPhones |
+    Format-List
